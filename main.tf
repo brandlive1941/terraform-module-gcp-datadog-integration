@@ -40,7 +40,7 @@ resource "google_service_account" "datadog_integration" {
 }
 
 // Grant token creator role to the Datadog principal account.
-resource "google_service_account_iam_member" "datadog_sa_iam" {
+resource "google_service_account_iam_member" "datadog_principal_iam" {
   service_account_id = google_service_account.datadog_integration.name
   role               = "roles/iam.serviceAccountTokenCreator"
   member             = "serviceAccount:${var.principal_account}"
