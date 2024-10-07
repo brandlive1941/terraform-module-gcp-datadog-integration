@@ -74,7 +74,7 @@ resource "google_pubsub_subscription" "datadog_logs" {
   ack_deadline_seconds       = 60
 
   push_config {
-    push_endpoint = "https://gcp-intake.logs.${var.site}/v1/input/${var.datadog_api_key}/"
+    push_endpoint = "https://gcp-intake.logs.${var.site}/v1/input/${var.api_key}/"
   }
 }
 
