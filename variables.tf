@@ -25,8 +25,14 @@ variable "app_key" {
   type        = string
 }
 
+variable "principal_account" {
+  description = "Datadog Principal Account"
+  type        = string
+}
+
 variable "site" {
   description = "Datadog Site"
   type        = string
   default     = "datadoghq.com"
 }
+

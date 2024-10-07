@@ -31,9 +31,10 @@ This module supports the following configuration options:
 - `api_key` (required): The Datadog API key used for authentication.
 - `app_key` (required): The Datadog APP key used for identification.
 - `gcp_project_id` (required): The ID of the GCP project where the resources are located.
+- `principal_account` (required): The Datadog Principal account created for your project
 - `site` (optional): The Datadog site to send the metrics and logs to (e.g., `datadoghq.com` or `datadoghq.eu`).
 
-For more detailed information on how to configure this module, please refer to the [documentation](https://github.com/brandlive1941/terraform-module-gcp-datadog-integration/blob/main/docs/configuration.md).
+For more detailed information on the Datadog integration, please refer to the [documentation](https://docs.datadoghq.com/integrations/google_cloud_platform/?tab=project#setup).
 
 ## Contributing
 

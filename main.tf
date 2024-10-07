@@ -43,7 +43,7 @@ resource "google_service_account" "datadog_integration" {
 resource "google_service_account_iam_member" "datadog_sa_iam" {
   service_account_id = google_service_account.datadog_integration.name
   role               = "roles/iam.serviceAccountTokenCreator"
-  member             = "serviceAccount:${google_service_account.datadog_integration.email}"
+  member             = "serviceAccount:${var.principal_account}"
 }
 
 // Grant roles to the Datadog principal account.
