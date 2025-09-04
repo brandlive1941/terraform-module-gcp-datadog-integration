@@ -81,7 +81,7 @@ resource "google_pubsub_subscription" "datadog_logs" {
 resource "google_logging_project_sink" "datadog_sink" {
   name                   = "datadog-sink"
   destination            = "pubsub.googleapis.com/${google_pubsub_topic.export_logs_to_datadog.id}"
-  filter                 = "resource.type=\"cloud_run_revision\" OR resource.type=\"cloud_function\" OR resource.type=\"cloud_scheduler_job\""
+  filter                 = var.log_sink_filter
   unique_writer_identity = true
 }
 
