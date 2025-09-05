@@ -33,6 +33,7 @@ This module supports the following configuration options:
 - `gcp_project_id` (required): The ID of the GCP project where the resources are located.
 - `principal_account` (required): The Datadog Principal account created for your project
 - `site` (optional): The Datadog site to send the metrics and logs to (e.g., `datadoghq.com` or `datadoghq.eu`).
+- `log_sink_filter`: Filter to limit which types logs are sent to Datadog 
 
 For more detailed information on the Datadog integration, please refer to the [documentation](https://docs.datadoghq.com/integrations/google_cloud_platform/?tab=project#setup).
 

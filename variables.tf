@@ -36,3 +36,9 @@ variable "site" {
   default     = "datadoghq.com"
 }
 
+variable "log_sink_filter" {
+  description = "Filter for the log sink"
+  type        = string
+  default     = ""
+}
+
